@@ -98,15 +98,20 @@ button {
 
 .side-menu nav {
     position: fixed;
-    inset: 0 0 0 auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
     z-index: 40;
-    display: grid;
-    align-content: start;
-    width: min(82vw, 340px);
+    display: flex;
+    flex-direction: column;
+    width: min(78vw, 300px);
+    height: 100vh;
+    min-height: 100dvh;
     padding: 86px 28px 32px;
     color: var(--white);
     background: #202124;
     box-shadow: 0 20px 70px rgba(0, 0, 0, 0.30);
+    overflow-y: auto;
 }
 
 .side-menu nav strong {
@@ -117,6 +122,7 @@ button {
 }
 
 .side-menu nav a {
+    color: var(--white);
     padding: 18px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     font-size: 18px;
