@@ -104,20 +104,21 @@ button {
     align-content: start;
     width: min(82vw, 340px);
     padding: 86px 28px 32px;
-    background: var(--white);
-    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.16);
+    color: var(--white);
+    background: #202124;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.30);
 }
 
 .side-menu nav strong {
     margin-bottom: 22px;
-    color: var(--red);
+    color: #ff5b6d;
     font-size: 13px;
     font-weight: 950;
 }
 
 .side-menu nav a {
     padding: 18px 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     font-size: 18px;
     font-weight: 900;
 }
