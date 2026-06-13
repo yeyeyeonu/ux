@@ -1,0 +1,82 @@
+.month-page,
+.all-page {
+    padding: 42px 24px 56px;
+}
+
+.month-page h1,
+.all-page h1 {
+    margin: 0 0 28px;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 950;
+}
+
+.month-page h1 {
+    max-width: 320px;
+}
+
+.month-list,
+.all-list {
+    display: grid;
+    gap: 20px;
+}
+
+.month-row,
+.all-row {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 14px;
+    align-items: center;
+}
+
+.month-row img,
+.all-row img {
+    width: 112px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: #d9d9d9;
+}
+
+.month-day strong {
+    display: block;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 950;
+}
+
+.month-day span,
+.all-row span {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.all-row strong {
+    display: block;
+    font-size: 13px;
+}
+
+.simple-search {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.simple-search input {
+    min-height: 46px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+}
+
+.simple-search button {
+    padding: 0 12px;
+    color: var(--white);
+    background: var(--ink);
+    border: 0;
+    border-radius: 4px;
+    font-weight: 900;
+}

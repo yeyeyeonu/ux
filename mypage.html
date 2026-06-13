@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>마이페이지 | SCH.Stage</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/mypage.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">SCH.STAGE</a>
+        <a class="top-link" href="mypage.html">마이페이지</a>
+        <details class="side-menu">
+            <summary aria-label="메뉴">☰</summary>
+            <nav>
+                <strong>SCH.STAGE</strong>
+                <a href="index.html">메인</a>
+                <a href="monthly.html">월별 공연</a>
+                <a href="all-shows.html">전체 공연</a>
+                <a href="mypage.html">마이페이지</a>
+            </nav>
+        </details>
+    </header>
+
+    <main class="phone-frame">
+        <section class="mypage">
+            <p class="eyebrow">student profile</p>
+            <h1>나의 프로필</h1>
+            <article class="student-card">
+                <div>
+                    <img id="profilePreview" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" alt="프로필 사진">
+                    <strong>20261234</strong>
+                </div>
+                <dl>
+                    <dt>이름</dt>
+                    <dd id="profileName">순천향 학생</dd>
+                    <dt>학과</dt>
+                    <dd>공연영상학과</dd>
+                    <dt>등급</dt>
+                    <dd>Campus Audience</dd>
+                </dl>
+            </article>
+            <form class="profile-form" id="profileForm">
+                <label>이름<input id="nameInput" value="순천향 학생"></label>
+                <label>프로필 이미지 URL<input id="imageInput" placeholder="https://..."></label>
+                <button type="submit">저장</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/mypage.js"></script>
+</body>
+</html>

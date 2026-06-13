@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>전체 공연 | SCH.Stage</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/listing.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">SCH.STAGE</a>
+        <a class="top-link" href="mypage.html">마이페이지</a>
+        <details class="side-menu">
+            <summary aria-label="메뉴">☰</summary>
+            <nav>
+                <strong>SCH.STAGE</strong>
+                <a href="index.html">메인</a>
+                <a href="monthly.html">월별 공연</a>
+                <a href="all-shows.html">전체 공연</a>
+                <a href="mypage.html">마이페이지</a>
+            </nav>
+        </details>
+    </header>
+
+    <main class="phone-frame">
+        <section class="all-page">
+            <h1>ALL SHOWS</h1>
+            <form class="simple-search" id="searchForm">
+                <input id="searchInput" name="q" placeholder="공연 검색">
+                <button type="submit">검색</button>
+            </form>
+            <div class="all-list" id="allList"></div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/listing.js"></script>
+</body>
+</html>
