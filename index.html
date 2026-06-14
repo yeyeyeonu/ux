@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
-    <header class="site-header">
-        <a class="brand" href="index.html">SCH.STAGE</a>
-        <a class="top-link" href="mypage.htm"></a>
-        <details class="side-menu">
-            <summary aria-label="메뉴">☰</summary>
-            <nav>
-                <strong>SCH.STAGE</strong>
-                <a href="index.html">메인</a>
-                <a href="monthly.html">월별 공연</a>
-                <a href="all-shows.html">전체 공연</a>
-                <a href="mypage.html">마이페이지</a>
-            </nav>
-        </details>
-    </header>
-
+<body class="home-page">
     <main class="phone-frame main-frame">
         <section class="now-section">
+            <div class="app-head">
+                <p>SCH • STAGE • BAND • THEATER • MOVIE • MUSIC • SHOW</p>
+                <details class="side-menu app-menu">
+                    <summary aria-label="메뉴">☰</summary>
+                    <nav>
+                        <strong>SCH.STAGE</strong>
+                        <a href="index.html">메인</a>
+                        <a href="monthly.html">월별 공연</a>
+                        <a href="all-shows.html">전체 공연</a>
+                        <a href="mypage.html">마이페이지</a>
+                    </nav>
+                </details>
+            </div>
+
+            <h1 class="stage-logo">SCH.STAGE</h1>
+
             <div class="headline">
-                <p class="eyebrow"></p>
-                <h1>NOW SHOWING</h1>
+                <h2>NOW SHOWING</h2>
             </div>
 
             <section class="poster-strip" aria-label="추천 공연 포스터">
@@ -39,8 +39,9 @@
 
             <section class="folder-showcase" aria-label="장르별 공연">
                 <div class="folder-tabs">
-                    <button class="active" type="button" data-folder-tab="밴드">밴드 공연</button>
+                    <button class="active" type="button" data-folder-tab="밴드">밴드</button>
                     <button type="button" data-folder-tab="연극">연극</button>
+                    <button type="button" data-folder-tab="영화제">영화제</button>
                 </div>
                 <div class="mini-picks" id="folderPicks"></div>
             </section>

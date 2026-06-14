@@ -22,7 +22,9 @@ function renderFeatureCarousel() {
 
 function renderFolderCards(genre) {
     const root = document.getElementById("folderPicks");
-    const items = PERFORMANCES.filter((item) => item.genre === genre);
+    const selected = PERFORMANCES.filter((item) => item.genre === genre);
+    const rest = PERFORMANCES.filter((item) => item.genre !== genre);
+    const items = [...selected, ...rest].slice(0, 3);
     root.innerHTML = items.map((item) => `
         <a href="${detailUrl(item.id)}">
             <img src="${item.image}" alt="${escapeHtml(item.title)}">
