@@ -42,7 +42,7 @@
 .stage-logo {
     margin: 0;
     padding: 12px 0 4px;
-    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-family: var(--font-script);
     font-size: 40px;
     line-height: 0.92;
     font-weight: 950;
