@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>campus stage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- 온보딩 -->
+  <section class="screen onboarding active" id="onboardingScreen">
+    <div class="stars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="slide active">
+      <p class="tag">CAMPUS STAGE</p>
+      <h1>전국 대학 공연을<br>한 곳에서</h1>
+      <p>연극, 뮤지컬, 영화 관련 학과들의 공연을 쉽게 찾아보세요.</p>
+    </div>
+
+    <div class="slide">
+      <p class="tag">THEATRE · MUSICAL · FILM</p>
+      <h1>학과 공연을<br>더 가깝게</h1>
+      <p>학교별, 지역별, 장르별 공연 정보를 한눈에 확인할 수 있어요.</p>
+    </div>
+
+    <div class="slide">
+      <p class="tag">DISCOVER</p>
+      <h1>숨은 공연을<br>발견하다</h1>
+      <p>홍보가 어려웠던 학생 공연도 더 많은 관객과 만날 수 있어요.</p>
+    </div>
+
+    <div class="slide">
+      <p class="tag">START</p>
+      <h1>내 주변 캠퍼스의<br>무대를 찾아볼까요?</h1>
+      <p>지역을 선택하고 관심 있는 학교 공연을 둘러보세요.</p>
+    </div>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <button class="next-btn" id="onboardingBtn">다음</button>
+  </section>
+
+  <!-- 도 선택 -->
+  <section class="screen region-screen" id="provinceScreen">
+    <header class="simple-header">
+      <h1>지역을 선택해주세요</h1>
+      <p>관심 있는 공연 지역을 먼저 고를게요.</p>
+    </header>
+
+    <div class="bubble-wrap" id="provinceList">
+      <button class="bubble">서울</button>
+      <button class="bubble">경기</button>
+      <button class="bubble">인천</button>
+      <button class="bubble">충남</button>
+      <button class="bubble">충북</button>
+      <button class="bubble">대전</button>
+      <button class="bubble">전북</button>
+      <button class="bubble">전남</button>
+      <button class="bubble">광주</button>
+      <button class="bubble">경북</button>
+      <button class="bubble">경남</button>
+      <button class="bubble">부산</button>
+      <button class="bubble">대구</button>
+      <button class="bubble">강원</button>
+      <button class="bubble">제주</button>
+    </div>
+  </section>
+
+  <!-- 시 선택 -->
+  <section class="screen region-screen" id="cityScreen">
+    <header class="simple-header">
+      <button class="back-btn" id="backToProvince">←</button>
+      <h1 id="cityTitle">시/군을 선택해주세요</h1>
+      <p>선택한 지역 안의 공연을 보여드릴게요.</p>
+    </header>
+
+    <div class="bubble-wrap city" id="cityList"></div>
+
+    <button class="start-btn" id="startBtn">시작하기</button>
+  </section>
+
+<!-- 홈 -->
+<section class="screen home-screen" id="homeScreen">
+
+    <!-- 홈 탭 화면 -->
+    <div id="homeContent">
+      <header class="home-header">
+        <div>
+          <p>전국 대학 공연 모아보기</p>
+          <h1>campus stage</h1>
+        </div>
+        <button class="profile-btn">MY</button>
+      </header>
+  
+      <div class="search-box">
+        <span>⌕</span>
+        <input type="text" placeholder="학교명, 공연명, 지역 검색" />
+      </div>
+
+      <div class="genre-tabs">
+        <button class="genre-tab active" data-genre="all">전체</button>
+        <button class="genre-tab" data-genre="movie">영화</button>
+        <button class="genre-tab" data-genre="play">연극</button>
+        <button class="genre-tab" data-genre="musical">뮤지컬</button>
+      </div>
+  
+      <section class="poster-slider">
+        <div class="slider-track" id="sliderTrack"></div>
+        <div class="slider-dots" id="sliderDots"></div>
+      </section>
+  
+      <section class="content-section dark">
+        <div class="section-title">
+          <h2>인기 있는 공연</h2>
+          <span>TOP 10</span>
+        </div>
+  
+        <div class="netflix-row">
+          <article class="poster-card" data-genre="musical">
+            <div class="poster poster1"></div>
+            <h3>청춘의 밤</h3>
+            <p>상명대학교 천안캠퍼스 · 뮤지컬</p>
+          </article>
+  
+          <article class="poster-card" data-genre="play">
+            <div class="poster poster2"></div>
+            <h3>갈매기</h3>
+            <p>호서대 · 연극</p>
+          </article>
+  
+          <article class="poster-card" data-genre="movie">
+            <div class="poster poster3"></div>
+            <h3>프레임 밖으로</h3>
+            <p>백석대 · 영화제</p>
+          </article>
+  
+          <article class="poster-card" data-genre="musical">
+            <div class="poster poster4"></div>
+            <h3>레미제라블 갈라</h3>
+            <p>순천향대 · 뮤지컬</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  
+    <!-- 지역 탭 화면 -->
+    <div class="tab-screen hidden" id="regionTab">
+      <div class="tab-header">
+        <h2>지역 다시 선택하기</h2>
+        <p id="currentLocation">현재 선택 지역 · 충남 천안</p>
+      </div>
+  
+      <div class="dark-region-list">
+        <button class="dark-region">서울</button>
+        <button class="dark-region">경기</button>
+        <button class="dark-region">인천</button>
+        <button class="dark-region selected">충남</button>
+        <button class="dark-region">충북</button>
+        <button class="dark-region">대전</button>
+        <button class="dark-region">전북</button>
+        <button class="dark-region">전남</button>
+        <button class="dark-region">광주</button>
+        <button class="dark-region">경북</button>
+        <button class="dark-region">경남</button>
+        <button class="dark-region">부산</button>
+        <button class="dark-region">대구</button>
+        <button class="dark-region">강원</button>
+        <button class="dark-region">제주</button>
+      </div>
+  
+      <button class="apply-region">지역 적용하기</button>
+    </div>
+
+    <div class="tab-screen hidden" id="schoolTab">
+      <div class="tab-header">
+        <h2>학교별 공연</h2>
+        <p>학교를 선택하면 해당 학교 공연을 볼 수 있어요.</p>
+      </div>
+
+      <div class="genre-tabs school-tabs">
+        <button class="school-filter active" data-school="sangmyung">상명대</button>
+        <button class="school-filter" data-school="hoseo">호서대</button>
+        <button class="school-filter" data-school="baekseok">백석대</button>
+        <button class="school-filter" data-school="soonchunhyang">순천향대</button>
+      </div>
+
+      <section class="poster-slider">
+        <div class="slider-track" id="schoolSliderTrack"></div>
+        <div class="slider-dots" id="schoolSliderDots"></div>
+      </section>
+
+      <section class="content-section dark">
+        <div class="section-title">
+          <h2 id="schoolPerformanceTitle">상명대 천안 공연</h2>
+          <span>NOW</span>
+        </div>
+
+        <div class="netflix-row" id="schoolPerformanceList"></div>
+      </section>
+    </div>
+
+    <!-- 마이 탭 -->
+    <div class="tab-screen hidden" id="myTab">
+      <div class="tab-header">
+        <h2>마이페이지</h2>
+        <p>나의 공연 활동을 확인해보세요.</p>
+      </div>
+
+      <section class="student-card">
+        <div class="student-top">
+          <div>
+            <p>CAMPUS STAGE ID</p>
+            <h3>이연우</h3>
+          </div>
+          <div class="student-photo">YW</div>
+        </div>
+
+        <div class="student-info">
+          <span>관심 장르</span>
+          <strong>연극 · 뮤지컬 · 영화</strong>
+        </div>
+
+        <div class="student-info">
+          <span>선택 지역</span>
+          <strong>서울</strong>
+        </div>
+      </section>
+
+      <section class="my-menu">
+        <button>
+          <span>♡</span>
+          내가 찜한 목록
+        </button>
+
+        <button>
+          <span>✎</span>
+          내가 쓴 관람평
+        </button>
+
+        <button>
+          <span>🎟</span>
+          내가 봤던 공연
+        </button>
+
+        <button>
+          <span>⚙</span>
+          내 정보 수정
+        </button>
+      </section>
+    </div>
+
+    <!-- 공연 상세 화면 -->
+    <div class="tab-screen hidden" id="detailTab">
+      <button class="detail-back-btn" id="detailBackBtn">←</button>
+
+      <div class="detail-poster" id="detailPoster"></div>
+
+      <div class="detail-info">
+        <span id="detailTag">MUSICAL</span>
+        <h2 id="detailTitle">청춘의 밤</h2>
+        <p id="detailDesc">상명대학교 천안캠퍼스 · 뮤지컬 정기공연</p>
+
+        <div class="detail-meta">
+          <div>
+            <strong>공연일</strong>
+            <p id="detailDate">06.21</p>
+          </div>
+          <div>
+            <strong>장소</strong>
+            <p id="detailPlace">상명대 천안 계당홀</p>
+          </div>
+          <div>
+            <strong>러닝타임</strong>
+            <p>90분</p>
+          </div>
+        </div>
+
+        <section class="detail-section">
+          <h3>공연 소개</h3>
+          <p id="detailStory">
+            청춘의 불안과 설렘을 음악으로 풀어낸 캠퍼스 뮤지컬 공연입니다.
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h3>예매 정보</h3>
+          <div class="time-chip-wrap">
+            <button class="time-chip selected">18:00</button>
+            <button class="time-chip">20:00</button>
+          </div>
+        </section>
+
+        <button class="reserve-detail-btn">예매하기</button>
+
+        <section class="detail-section review-section">
+          <h3>관람평</h3>
+
+          <div class="review-form">
+            <select id="reviewRating">
+              <option value="5">★★★★★ 5점</option>
+              <option value="4">★★★★☆ 4점</option>
+              <option value="3">★★★☆☆ 3점</option>
+              <option value="2">★★☆☆☆ 2점</option>
+              <option value="1">★☆☆☆☆ 1점</option>
+            </select>
+
+            <textarea id="reviewInput" placeholder="공연 관람평을 남겨주세요"></textarea>
+
+            <button id="reviewSubmitBtn">관람평 등록</button>
+          </div>
+
+          <div class="review-list" id="reviewList">
+            <div class="review-card">
+              <strong>★★★★★</strong>
+              <p>학생 공연인데 완성도가 높아서 놀랐어요.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  
+    <nav class="bottom-nav">
+      <div class="nav-item active" data-tab="home">홈</div>
+      <div class="nav-item" data-tab="region">지역</div>
+      <div class="nav-item" data-tab="school">학교</div>
+      <div class="nav-item" data-tab="my">마이</div>
+    </nav>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
